@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: pressure-test-analyzer
+  datasource:
+    url: jdbc:sqlite:./data/pressure-test-analyzer.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+server:
+  port: 8080
+
+cors:
+  allowed-origins: http://localhost:5173
